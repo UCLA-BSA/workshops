@@ -1,0 +1,111 @@
+---
+title: "blogdown and You"
+subtitle: "An Introduction to Creating Websites Using R"
+author: "Emilie Campos and Crystal Shaw"
+institute: "UCLA Biostatistics Student Association"
+date: "2020-??-?? (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          </div>
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div> 
+    css: ["default", "metropolis", "metropolis-fonts"]
+    # includes: 
+    #   in_header: header.html
+editor_options: 
+  chunk_output_type: inline
+header_includes: 
+  -\usepackage{amsmath}
+  -\usepackage{rotate, lscape, color, graphicx, amsmath, amsthm, epsfig, amssymb, ulem, amsfonts}
+---
+
+<style type="text/css">
+
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #FFB81C;
+}
+
+a, a > code {
+  color: #FFB81C;
+  text-decoration: none;
+}
+
+.remark-slide-content {
+  background-color: #FAFAFA;
+  border-top: 80px solid #2774AE;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em
+}
+
+.inverse {
+  background-color: #2774AE;
+  text-shadow: none;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.title-slide .inverse .remark-slide-content {
+  background-color: #FAFAFA;
+}
+
+.title-slide {
+  background-color: #FAFAFA;
+  border-top: 80px solid #FAFAFA;
+}
+
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+
+.caption {
+  text-align: center;
+  font-size: .8rem;
+}
+</style>
+
+# A *VERY* brief introduction
+
+There are tons of resources out there which can mean that it's overwhelming. 
+
+Your first stop should be the creators' book on `blogdown`: https://bookdown.org/yihui/blogdown/
+
+This presentation will loosely follow the tutorial created by one of the creators found at https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/
+
+
+---
+
+class: inverse, center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
