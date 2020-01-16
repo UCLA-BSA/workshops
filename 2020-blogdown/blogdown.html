@@ -4,24 +4,25 @@
     <title>blogdown and You</title>
     <meta charset="utf-8" />
     <meta name="author" content="Emilie Campos and Crystal Shaw" />
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/5235085b15.js"></script>
   </head>
   <body>
     <textarea id="source">
-class: center, middle, inverse, title-slide
+class: left, middle, inverse, title-slide
 
 # blogdown and You
 ## An Introduction to Creating Websites Using R
 ### Emilie Campos and Crystal Shaw
 ### UCLA Biostatistics Student Association
-### 2020-??-?? (updated: 2019-11-25)
+### 2020-??-?? (Updated 2020-01-09) <br><br> Slides available at <a href="link">link</a>
 
 ---
 
 
-&lt;style type="text/css"&gt;
+
+&lt;style&gt;
 
 .remark-slide-number {
   position: inherit;
@@ -30,7 +31,7 @@ class: center, middle, inverse, title-slide
 .remark-slide-number .progress-bar-container {
   position: absolute;
   bottom: 0;
-  height: 4px;
+  height: 6px;
   display: block;
   left: 0;
   right: 0;
@@ -38,7 +39,22 @@ class: center, middle, inverse, title-slide
 
 .remark-slide-number .progress-bar {
   height: 100%;
-  background-color: #FFB81C;
+  background-color: #EB811B;
+}
+
+.wrap {
+    width: 1225px;
+    height: 500px;
+    overflow: hidden;
+}
+
+iframe {
+    width: 142.9% !important;
+    height: 142.9% !important;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
 }
 
 a, a &gt; code {
@@ -46,25 +62,34 @@ a, a &gt; code {
   text-decoration: none;
 }
 
-.remark-slide-content {
-  background-color: #FAFAFA;
-  border-top: 80px solid #2774AE;
-  font-size: 30px;
-  font-weight: 300;
-  line-height: 1.5;
-  padding: 1em 2em 1em 2em
-}
-
 .inverse {
-  background-color: #2774AE;
+  background-color: #003B5C;
   text-shadow: none;
-  font-size: 30px;
-  font-weight: 600;
 }
 
 .title-slide .inverse .remark-slide-content {
   background-color: #FAFAFA;
+  border-top: 0px solid #FAFAFA;
 }
+
+.remark-slide-content {
+  background-color: #FAFAFA;
+  border-top: 80px solid #FAFAFA;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 1em 1em 1em
+}
+
+.remark-slide-content &gt; h1 {
+  font-family: 'Fira Sans';
+  font-weight: normal;
+  font-size: 45px;
+  color: #1A292C;
+  margin-top: -70px;
+  margin-left: -00px;
+}
+
 
 .title-slide {
   background-color: #FAFAFA;
@@ -73,18 +98,33 @@ a, a &gt; code {
 
 .pull-left {
   float: left;
-  width: 47%;
+  width: 49%;
 }
 .pull-right {
   float: right;
-  width: 47%;
+  width: 49%;
+}
+
+.pull-left-skinny {
+  float: left;
+  width: 40%;
+}
+.pull-right-fat {
+  float: right;
+  width: 59%;
 }
 
 .caption {
   text-align: center;
-  font-size: .8rem;
+  font-size: 1rem;
+}
+
+.supp-slide .remark-slide-number {
+  display: none;
 }
 &lt;/style&gt;
+
+
 
 # A *VERY* brief introduction
 
@@ -92,26 +132,52 @@ There are tons of resources out there which can mean that it's overwhelming.
 
 Your first stop should be the creators' book on `blogdown`: https://bookdown.org/yihui/blogdown/
 
-This presentation will loosely follow the tutorial created by one of the creators found at https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/
+This presentation will more than loosely follow the tutorial created by one of the creators found at https://alison.rbind.io/post/2017-06-12-up-and-running-with-blogdown/
+
+---
+
+class: center, middle
+
+# `blogdown` 
+
+An R package for creating websites using RMarkdown and Hugo 
+
+![](images/blogdown-package.png)
 
 
 ---
 
-class: inverse, center, middle
 
-# Thanks!
+# Feel free to follow along
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+
+
+
+
+---
+
+class: inverse, center, middle, clear
+
+# Further Questions
+
+&lt;a href="mailto:ejcampos@ucla.edu"&gt;&lt;i class="fa fa-paper-plane fa-fw"&gt;&lt;/i&gt;&amp;nbsp; ejcampos@ucla.edu&lt;/a&gt;, &lt;a href="mailto:c.shaw@ucla.edu"&gt; c.shaw@ucla.edu&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://twitter.com/emjcampos"&gt;&lt;i class="fa fa-twitter fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @emjcampos&lt;/a&gt;, &lt;a href="http://twitter.com/cshawsome"&gt; @cshawsome&lt;/a&gt;&lt;br&gt;
+&lt;a href="http://github.com/emjcampos"&gt;&lt;i class="fa fa-github fa-fw"&gt;&lt;/i&gt;&amp;nbsp; @emjcampos&lt;/a&gt;, &lt;a href="http://github.com/cshaw343"&gt;@cshaw343&lt;/a&gt;&lt;br&gt;
+
+Slides available at [bit.ly/pERPred-talk](http://bit.ly/pERPred-talk).
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
+"navigation": {
+"scroll": false
+},
 "highlightStyle": "github",
 "highlightLines": true,
 "countIncrementalSlides": false,
-"slideNumberFormat": "<div class=\"progress-bar-container\">   </div>   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div>  "
+"slideNumberFormat": "<div class=\"progress-bar-container\">   <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">   </div> </div> ",
+"ratio": "4:3"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
@@ -151,7 +217,24 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 (function() {
